@@ -7,7 +7,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const { email, password, fullName } = await req.json();
+  const { email, password } = await req.json();
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
@@ -21,7 +21,6 @@ export async function POST(req) {
     await setDoc(userRef, {
       uid: user.uid,
       email: user.email,
-      fullName: fullName || "",
       createdAt: new Date(),
     });
 
