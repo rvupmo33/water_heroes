@@ -1,7 +1,9 @@
 import React from "react";
 import achievementBadge from "@/assets/achievementBadge.png";
 import challCard from "@/assets/challCard.png";
+import factImg from "@/assets/FactImg.png";
 import Image from "next/image";
+import { Clock } from "lucide-react";
 
 const Bento = () => {
   return (
@@ -47,17 +49,28 @@ const Bento = () => {
                 width={100}
                 className="opacity-[75%]"
               />
-              <p className="mt-3 text-md font-light">
-                Complete lessons and challenges to <br /> start earning badges
+              <p className="mt-3 text-sm font-light max-w-[300px]">
+                Complete lessons and challenges to start earning badges
               </p>
             </div>
           </div>
-          <div className="flex-1 bg-white shadow-md p-5 rounded-lg">
-            <p className="font-bold text-[#1E4A7C]">Fact of the Day!</p>
+          <div className="relative flex-1 bg-white shadow-md p-5 rounded-lg flex flex-col mt-5 md:mt-0">
+            <p className="font-bold text-[#1E4A7C] mb-5">Fact of the Day!</p>
+            <Image
+              src={factImg}
+              alt=""
+              className="absolute bottom-0 left-0 w-[80px] md:w-[100px] lg:w-[130px] xl:w-[170px]"
+            />
+            <div className="w-full max-w-[250px] rounded-md h-27 bg-[#FFF28C] self-end">
+              <p className="text-xs text-center p-4">
+                Did you know? The average American uses 80-100 gallons of water
+                per day! <br /> —Captain Droplet
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full md:w-64 bg-white shadow-md p-4 rounded-lg mt-4 md:mt-0 md:ml-4">
+      <div className="w-full md:w-56 bg-white shadow-md p-4 rounded-lg mt-4 md:mt-0 md:ml-4">
         <p className="font-bold text-[#1E4A7C]">Challenges This Week</p>
         <div className="relative mt-5">
           <Image src={challCard} alt="Challenge Card" className="rounded-md" />
@@ -71,6 +84,10 @@ const Bento = () => {
           <p className="absolute inset-0 flex items-center justify-center text-black font-bold text-xl md:text-sm text-center">
             Save 10 Liters of <br /> Water This Week
           </p>
+        </div>
+        <div className="flex gap-2 bg-[#1E4A7C] p-2 rounded-md mt-5">
+          <Clock color="#FFF28C" />
+          <p className="text-[#FFF28C] font-bold">6 Days Left</p>
         </div>
       </div>
     </div>

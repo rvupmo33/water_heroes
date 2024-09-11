@@ -11,7 +11,7 @@ const Page = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const progress = 10;
+  const progress = 0;
 
   return (
     <div className="relative p-4 flex">
