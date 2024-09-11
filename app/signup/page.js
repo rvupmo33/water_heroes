@@ -3,6 +3,8 @@ import Signup from "@/components/Signup";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const SignupPage = () => {
   const [email, setEmail] = useState("");
@@ -42,7 +44,7 @@ const SignupPage = () => {
   return (
     <div className="mx-4">
       <Link href="/">
-        <p className="absolute px-7 py-5">LOGO</p>
+        <Image src={logo} height={25} alt="" className="mt-5" />
       </Link>
       <Signup
         email={email}

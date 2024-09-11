@@ -3,6 +3,8 @@ import Signin from "@/components/Signin";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const SigninPage = () => {
   const [email, setEmail] = useState("");
@@ -30,7 +32,6 @@ const SigninPage = () => {
 
       localStorage.setItem("user", JSON.stringify(data.userData));
 
-      // Redirect to the dashboard
       router.push("/dashboard");
     } catch (error) {
       console.error("Sign-in error:", error);
@@ -41,7 +42,7 @@ const SigninPage = () => {
   return (
     <div className="mx-4">
       <Link href="/">
-        <p className="absolute px-7 py-5">LOGO</p>
+        <Image src={logo} height={25} alt="" className="mt-5" />
       </Link>
       <Signin
         email={email}

@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center bg-[#FFFFFF] py-[13px] px-6 rounded-[20px] drop-shadow-md mb-5">
       <div>
-        <p>LOGO</p>
+        <Image src={logo} height={25} alt="" />
       </div>
       <div className="flex gap-10 items-center">
         <div className="flex gap-6">

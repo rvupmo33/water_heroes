@@ -10,6 +10,8 @@ import {
   PanelRightOpen,
 } from "lucide-react";
 import Link from "next/link";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
@@ -22,10 +24,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         {isOpen ? <PanelLeftClose /> : <PanelRightOpen color="#FFF" />}
       </button>
       <div className="p-4 h-full flex flex-col">
-        <h2 className="text-xs bg-[#D9D9D9] w-fit py-3 px-5 rounded-full">
-          LOGO
+        <h2 className="text-xs bg-[#F0F0F0] w-full py-3 px-5 rounded-full mt-10">
+          <Image src={logo} height={20} alt="" className="mx-auto" />
         </h2>
-        <div className="mt-10 flex flex-col gap-2 flex-grow">
+        <div className="mt-5 flex flex-col gap-2 flex-grow">
           <Link href="/dashboard">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <House color="#1E4A7C" />
@@ -38,19 +40,19 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <p>Lessons</p>
             </div>
           </Link>
-          <Link href="/quizzes">
+          <Link href="/dashboard">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <FileQuestion color="#1E4A7C" />
               <p>Quizzes (WIP)</p>
             </div>
           </Link>
-          <Link href="/challenges">
+          <Link href="/dashboard">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <Gamepad2 color="#1E4A7C" />
               <p>Challenges (WIP)</p>
             </div>
           </Link>
-          <Link href="/achievements">
+          <Link href="/dashboard">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <Medal color="#1E4A7C" />
               <p>Achievements (WIP)</p>
