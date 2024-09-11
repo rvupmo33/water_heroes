@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import heroImg from "@/assets/heroImg.png";
 import captainLogo from "@/assets/captainLogo.png";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,10 +19,13 @@ const Hero = () => {
               Join the Water Heroes and discover how you can save water and make
               a real difference in the world!
             </p>
-            <p className="text-xs xs:text-sm md:text-sm bg-[#FFF28C] py-2 px-10 w-fit border-2 border-[#1E4A7C] rounded-full mx-auto md:mx-0">
-              Join the Water Squad
-            </p>
+            <Link href={"/signup"}>
+              <p className="text-xs xs:text-sm md:text-sm bg-[#FFF28C] py-2 px-10 w-fit border-2 border-[#1E4A7C] rounded-full mx-auto md:mx-0">
+                Join the Water Squad
+              </p>
+            </Link>
           </div>
+
           <div className="lg:mr-10  flex justify-center mt-10 md:mt-0 items-center">
             <Image
               src={captainLogo}

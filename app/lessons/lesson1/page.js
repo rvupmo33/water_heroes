@@ -10,6 +10,7 @@ import { useProgress } from "@/context/ProgressContext";
 const LessonPage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [completed, setCompleted] = useState(false);
+  const [hide, setHide] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const { incrementProgress, markLessonComplete } = useProgress();
 
@@ -22,6 +23,7 @@ const LessonPage = () => {
       incrementProgress(10);
       markLessonComplete("lesson1");
       setCompleted(true);
+      setHide(true);
     }
   };
 
@@ -88,7 +90,7 @@ const LessonPage = () => {
           <div className="relative">
             <Image
               src={slides[currentSlide].image}
-              alt="Underwater Scene"
+              alt="Slide Image"
               className="w-full h-80 object-cover rounded-2xl shadow-lg"
             />
             <h1 className="text-[#1E4A7C] font-bold text-4xl mt-8">
@@ -97,11 +99,13 @@ const LessonPage = () => {
             <p className="font-light text-lg font-normal mt-5">
               {slides[currentSlide].text}
             </p>
-            <p className="font-light text-sm font-light italic mt-16">
-              {slides[currentSlide].funFact}
-            </p>
+            {slides[currentSlide].funFact && (
+              <p className="font-light text-sm font-light italic mt-16">
+                {slides[currentSlide].funFact}
+              </p>
+            )}
           </div>
-          {currentSlide === 2 && (
+          {currentSlide === 2 && !hide && (
             <p
               className={`p-3 w-fit mx-auto rounded-md mt-10 cursor-pointer ${
                 completed

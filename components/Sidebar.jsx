@@ -41,26 +41,28 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <Link href="/quizzes">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <FileQuestion color="#1E4A7C" />
-              <p>Quizzes</p>
+              <p>Quizzes (WIP)</p>
             </div>
           </Link>
           <Link href="/challenges">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <Gamepad2 color="#1E4A7C" />
-              <p>Challenges</p>
+              <p>Challenges (WIP)</p>
             </div>
           </Link>
           <Link href="/achievements">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg hover:bg-[#8FBCF0] cursor-pointer">
               <Medal color="#1E4A7C" />
-              <p>Achievements</p>
+              <p>Achievements (WIP)</p>
             </div>
           </Link>
         </div>
-        <div className="mx-auto flex items-center gap-2 py-2 px-4 text-center rounded-lg hover:bg-[#8FBCF0] cursor-pointer mt-auto">
-          <DoorOpen color="#1E4A7C" />
-          <p>Logout</p>
-        </div>
+        <Link href={"/"}>
+          <div className="mx-auto flex items-center gap-2 py-2 px-4 text-center rounded-lg hover:bg-[#8FBCF0] cursor-pointer mt-auto">
+            <DoorOpen color="#1E4A7C" />
+            <p>Logout</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
