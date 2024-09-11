@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "@/components/Sidebar";
 import { PanelRightOpen, PanelLeftClose } from "lucide-react";
 import Bento from "@/components/Bento";
+import { useProgress } from "@/context/ProgressContext";
 
 const Page = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const { progress, level } = useProgress();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
-
-  const progress = 0;
 
   return (
     <div className="relative p-4 flex">
@@ -46,7 +46,7 @@ const Page = () => {
         <div className="bg-[#FFFFFF] px-3 py-4 rounded-[15px] shadow-md mt-3 flex items-center">
           <div className="bg-[#FDF5B8] w-fit px-4 py-2 rounded-full flex flex-col justify-center text-center border-2 border-[#1E4A7C]">
             <p className="text-xs">LVL</p>
-            <p className="text-xs">1</p>
+            <p className="text-xs font-bold">{level}</p>{" "}
           </div>
           <div className="relative w-full h-5 ml-4 bg-[#E0E0E0] rounded-full border-2 border-[#1E4A7C]">
             <div
