@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img src="/assets/logo.png" alt="Description of Image" width="450px" borderRadius="50px" />
+</p>
+<p align="center">Addressing the gap in youth education on water sustainability
 
-## Getting Started
+<hr/>
 
-First, run the development server:
+### Project Description
 
+<p>Water Heroes is a platform designed to engage young audiences in learning about water conservation. Through interactive content like quizzes, fun facts, and lessons, it educates children on the importance of water sustainability and encourages them to take action. The platform makes learning about this crucial topic both enjoyable and impactful.</p>
+
+
+### Product Images
+
+<p align="center">
+  <img src="/assets/PI3.png" alt="Description of Image" width="90%" borderRadius="50px" />
+</p>
+<p align="center">
+  <img src="/assets/PI2.png" alt="Description of Image" width="90%" borderRadius="50px" />
+</p>
+
+<p align="center">
+  <img src="/assets/PI1.png" alt="Description of Image" width="90%" borderRadius="50px" />
+</p>
+
+### Getting Started
+
+a. &nbsp;Clone the Repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/rvupmo33/waterhacks_project.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+b. &nbsp;Install Dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+c. &nbsp;Create a Firebase project and set up 'Authentication' and 'Firestore Database'. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+d. &nbsp;Create a '.env.local' file in the root directory of the project and add your keys:
+```bash
+NEXT_PUBLIC_API_KEY=EnterKeyHere
+NEXT_PUBLIC_AUTH_DOMAIN=EnterKeyHere
+NEXT_PUBLIC_AUTH_PROJECT_ID=EnterKeyHere
+NEXT_PUBLIC_AUTH_STORAGE_BUCKET=EnterKeyHere
+NEXT_PUBLIC_AUTH_MESSAGE_ID=EnterKeyHere
+NEXT_PUBLIC_AUTH_APP_ID=EnterKeyHere
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+d. &nbsp;Run the Project:
+```bash
+npm run dev
+```
+<hr/>
